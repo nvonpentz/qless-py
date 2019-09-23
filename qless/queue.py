@@ -95,7 +95,7 @@ class Queue(object):
             delay or 0,
             'priority', priority or 0,
             'tags', json.dumps(tags or []),
-            'retries', retries or 5,
+            'retries', 5 if retries is None else retries,
             'depends', json.dumps(depends or [])
         )
 
